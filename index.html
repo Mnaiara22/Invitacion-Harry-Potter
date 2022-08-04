@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <script src="memotest.js"></script>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <title>Invitacion</title> 
+
+</head>
+
+<body>
+
+
+
+    <!--Bienvenida + local storage-->
+
+
+
+
+    <section class="container" id="bienvenida">
+
+        <div id="hola">
+            <p>Ingrese a continuación su nombre para empezar</p>
+            <input class="name" type="text" id="nombre" />
+            <input class="continue" type="button" onclick="guardarDatos()" value="Continuar" />
+        </div>
+
+    </section>
+
+
+
+    <!--Introduccion-->
+
+    <section id="intro" class="oculto">
+
+        <p class="inicio">
+
+            <p id="datos"></p>
+
+            <b>Harry:</b> Voldemort ha vuelto, y quiere llegar a Hogwarts, debemos llegar antes que el para poder salvar el colegio de Magia y Hechizeria. <br>
+            <b>Hermione:</b> Nos podras ayudar? Te necesitamos <br>
+            <b>Ron:</b> Estas listo?
+        </p>
+
+    <!--Boton empezar-->
+
+    <section class="title">
+        <button type="button" class="oculto" id="start">Vamos!!!</button>
+    </section>
+
+    </section>
+    
+
+
+
+
+    <!-- Memotest -->
+
+    
+
+    <section id="consigna--memotest" class="oculto">
+
+        <p class="title">Nos han duplicado<b id="player--1"></b></p>
+        <p>Debemos encontrar nuestras parejas para poder continuar</p>
+
+    </section>
+    
+    <section id="memotest" class="memotest">
+
+        <section class="title" id="fila--cartas1">
+
+            <div id="card--1" class="div--fondo">
+                <p id="p--1" class="oculto"></p>
+            </div>
+            <div id="card--2" class="div--fondo">
+                <p id="p--2" class="oculto"></p>
+            </div>
+            <div id="card--3" class="div--fondo">
+                <p id="p--3" class="oculto"></p>
+            </div>
+            
+        </section>
+    
+        <section id="fila--cartas2" class="title">
+
+            <div id="card--4" class="div--fondo">
+                <p id="p--4" class="oculto"></p>
+            </div>
+            <div id="card--5" class="div--fondo">
+                <p id="p--5" class="oculto"></p>
+            </div>
+            <div id="card--6" class="div--fondo">
+                <p id="p--6" class="oculto"></p>
+            </div>
+
+        </section>
+
+  
+
+        <button type="button" id="start--trivia" class="oculto">Siguiente nivel</button>                      
+
+    </section>
+
+
+    <!-- Trivia -->
+
+    <section id="consigna--trivia" class="oculto">
+
+        <p class="title">Obstaculos<b id="player--1"></b></p>
+        <p>Hermione, sos la que mas sabes! Ayudanos a pasar estos obstaculos</p>
+
+    </section>
+
+    <div id= "quiz" class="container trivia" >
+
+        <section class="introduction" id="fila--trivia1">
+
+            <div class="objective"> <!-- Consigna -->
+                <h2 id="question"></h2> 
+            </div>
+
+            <div class="button" id="choices" ></div>  <!-- Opciones -->
+
+            <p id="progress">Estas a x of y niveles de llegar</p >
+
+        </section>
+
+    </div>  
+
+
+    <!-- Simon dice -->
+
+    <section id="consigna--simon" class="oculto">
+
+        <p class="title">A recordar...<b id="player--1"></b></p>
+        <p>Se ven luces extrañas en las salas comunes de las casas, vamos a memorizar la secuencia </p>
+
+    </section>
+
+    <section class="title" id="fila--botones1">   
+
+        <button type="button" id="color--1" class="red button">Gryffindor</button>
+        <button type="button" id="color--2" class="yellow button">Hufflepuff</button>
+
+    </section>
+
+    <section class="title" id="fila--botones2" >
+
+        <button type="button" id="color--3" class="green button">Slytherin</button>
+        <button type="button" id="color--4" class="blue button">Ravenclaw</button>
+
+    </section>
+
+    <section class="title">
+
+        <button type="button" id="start--simon" class="oculto">Start</button>                      
+        <p id="ronda"></p>
+
+    </section>
+
+    <p id="final" class="oculto">Estaremos celebrando en Hogsmade, la direccion es xxxxxx, el dia xxxxxx a las xxxxx!</p>
+
+    <!-- JS Y LIBRERIA -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/memotest.js"></script>
+    <script src="js/simondice.js"></script>
+    <script src="js/trivia.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
