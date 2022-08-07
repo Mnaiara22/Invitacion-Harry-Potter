@@ -9,9 +9,9 @@ let ronda = 0
 document.querySelector('#start--simon').onclick = function(){
     startSimon = true
     comprobarBotonStartSimon()
-    ocultarStart()
-    mostrarRonda()
-    reiniciar()
+    hideStart()
+    showRound()
+    restart()
     organizadorRonda()
     hideScoreTrivia()
     mostrarConsignaSimon()
@@ -51,7 +51,7 @@ function hideScoreTrivia(){
 
 //Oculta boton start cuando se entra al Simon Dice
 
-function ocultarStart(){ 
+function hideStart(){ 
     document.querySelector('#start--simon').className = 'oculto'
 }
 
@@ -124,12 +124,12 @@ function resaltar($boton){
     }, 500)
 }
 
-function reiniciar(){
+function restart(){
     secuenciaJugador = []
     secuenciaMaquina = []
 }
 
-function mostrarRonda(){
+function showRound(){
     let $pRonda = document.querySelector('#ronda')
     $pRonda.className = ''
 }
@@ -147,8 +147,8 @@ function ocultarRonda(){
 function perder(){
     Swal.fire({
         icon: 'error',
-        title: 'Oops...',
-        text: '¡Te confundiste!',      
+        title: '¡Te confundiste!',
+        text: 'Volvé a intentarlo',      
     })
     mostrarStart()
     reiniciarJuego()

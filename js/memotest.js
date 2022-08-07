@@ -18,32 +18,6 @@ document.querySelector('#start').onclick = function(){
     mostrarConsignaMemotest()
     hideBienvenida ()
 }
-/*
-const main = document.querySelector (`main`)
-
-async function getData () {
-        const res = await fetch ("http://hp-api.herokuapp.com/api/characters")
-        const photos = await res.json ()
-        photos.forEach(p => {
-
-// codigo para crear la tarjeta
-const card = document.createElement(`div`)
-card.className = "card"
-
-const img = ddocument.createElement (`img`)
-img.src = p.image
-
-const titulo = document.createEkenebt (`h3`)
-titulo.textContent = p.name
-
-card.append (img, titulo)
-main.append (card)               
-
-})
-
-}
-
-getData()*/
 
 function mostrarConsignaMemotest(){
     document.querySelector('#consigna--memotest').className = ''
@@ -57,6 +31,8 @@ function hideBienvenida(){
     document.querySelector('#bienvenida').className = 'oculto'
 }
 
+
+//Cartas
 document.querySelector('#card--1').onclick = function(){
     let card1 = document.querySelector('#p--1')
     card1.className = 'mostrar'    

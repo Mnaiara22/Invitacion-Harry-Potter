@@ -177,7 +177,7 @@ class UI {
 
     showProgress(currentIndex, total) {
     let element = document.getElementById("progress");
-    element.innerHTML = `Question ${currentIndex} of ${total}`; //Muestra la pregunta por la que va
+    element.innerHTML = `Pregunta ${currentIndex} de ${total}`; //Muestra la pregunta por la que va
     }
 }
 
